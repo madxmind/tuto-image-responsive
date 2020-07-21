@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Img Responsive</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			.columns {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+			}
+
+			.columns img {
+				width: 100%;
+			}
+
+			@media(min-width: 850px) {
+				.columns img {
+					width: 33.33%;
+				}
+			}
+		</style>
+
+	</head>
+	<body>
+		<header>
+			<picture>
+				<source media="(max-width: 500px)" srcset="img/mobile.jpg 400w, img/mobile_hd.jpg 600w">
+				<img srcset="img/desktop.jpg 1600w, img/ultra.jpg 3200w" src="img/banniere.jpg" alt="Bannière">
+			</picture>
+		</header>
+	</body>
+</html>
